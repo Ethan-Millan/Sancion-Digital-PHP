@@ -1,0 +1,243 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo principal */
+body {
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Barra superior */
+header {
+    width: 100%;
+    height: 70px;
+    background-color: #a3a3a3; /* Gris claro para el header */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo y menú en el header */
+header .menu {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+header .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+header .logo {
+    width: 50px;
+    margin-right: 10px;
+}
+
+header .menu-icon {
+    width: 50px;
+    height: auto;
+}
+
+/* Navegación alineada a la derecha */
+header .navegacion {
+    display: flex;
+    align-items: center;
+}
+
+header .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+header .navbar ul li a {
+    text-decoration: none;
+    color: #333333; /* Gris oscuro para los enlaces */
+    font-size: 18px; /* Letra ligeramente más grande */
+    transition: color 0.3s ease;
+}
+
+header .navbar ul li a:hover {
+    color: #5c5c5c; /* Gris más oscuro al pasar el mouse */
+}
+
+/* Contenido principal centrado */
+.main-content {
+    display: flex;
+    align-items: center; /* Centra el contenido verticalmente */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px; /* Más espacio entre el texto y la imagen */
+    flex-grow: 1; /* Hace que el main ocupe el espacio disponible */
+}
+
+/* Contenedor de texto */
+.text-section {
+    max-width: 600px;
+}
+
+.text-section h1 {
+    font-size: 32px; /* Tamaño de letra más grande */
+    color: #333333; /* Gris oscuro */
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.text-section p {
+    font-size: 20px; /* Tamaño de letra más grande para el párrafo */
+    color: #666666; /* Gris medio para el texto */
+    line-height: 1.8;
+    text-align: justify; /* Justificado */
+}
+
+/* Imagen */
+.illustration {
+    width: 50%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del formulario */
+.formularioA {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 120px);
+    padding: 20px;
+    gap: 20px;
+}
+
+.formularioA form {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 30px;
+    background-color: #d3d3d3; /* Gris claro para el fondo del formulario */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.formularioA label {
+    font-size: 1.2em;
+    color: #333333; /* Gris oscuro para los textos */
+    margin-bottom: 5px;
+}
+
+.formularioA input[type="text"],
+.formularioA input[type="password"],
+.formularioA input[type="date"],
+.formularioA select {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1em;
+    border: 1px solid #b5b5b5; /* Gris medio para el borde */
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del botón de envío */
+.formularioA input[type="submit"] {
+    padding: 15px;
+    font-size: 1.2em;
+    background-color: #b7b7b7; /* Gris claro para el botón */
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.formularioA input[type="submit"]:hover {
+    background-color: #c1c1c1; /* Gris un poco más claro al hacer hover */
+}
+
+/* Pie de página */
+footer {
+    width: 100%;
+    height: 60px;
+    background-color: #a3a3a3; /* Gris claro */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333333; /* Gris oscuro para el texto del footer */
+    font-size: 16px; /* Tamaño de letra ligeramente más grande */
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    bottom: 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: #ffcc00; /* Color dorado para el enlace */
+    margin-left: 5px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffdd44;
+}
+
+/* Media queries para adaptabilidad */
+@media (max-width: 1024px) {
+    .main-content {
+        padding: 15px;
+        flex-direction: column;
+        gap: 20px; /* Menos espacio entre texto e imagen en pantallas medianas */
+    }
+
+    .text-section h1 {
+        font-size: 28px;
+    }
+
+    .text-section p {
+        font-size: 18px;
+    }
+
+    .illustration {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    header .navbar ul {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    header .navbar ul li {
+        margin-left: 0;
+        margin-bottom: 5px;
+    }
+
+    .text-section h1 {
+        font-size: 24px;
+    }
+
+    .text-section p {
+        font-size: 16px;
+    }
+
+    .illustration {
+        width: 100%;
+        max-width: none;
+    }
+}

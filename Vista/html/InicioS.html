@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estancia II</title>
+    <link rel="stylesheet" href="../css/inicioSesion.css">
+</head>
+<body>
+    <header>
+        <h1 class="header-title">Inicio de sesión</h1>
+        
+        <div class="menu container">
+
+            <nav class="navbar">
+                <ul>
+                    <li><a href="../../Controlador/Controlador.php?accion=Redireccion&accion2=Antecedentes">Antecedentes</a></li>
+                    <li><a href="../../Controlador/Controlador.php?accion=Redireccion&accion2=Contactanos">Contactanos</a></li>
+                    <li><a href="../../Controlador/Controlador.php?accion=Redireccion&accion2=RegistroAlumnoIndex">Registrarse</a></li>
+                    <li><a href="../../Controlador/Controlador.php?accion=Redireccion&accion2=RegresarIndex">Regresar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header> 
+
+    <div class="FISU">
+        <form method="post" action="../../Controlador/Controlador.php">
+            <input type="hidden" name="accion" value="iniciarS">
+            <div class="username">
+                <label for="txtUsuario">Matrícula</label>
+                <input type="text" id="txtUsuario" name="txtUsuario" required>
+            </div>
+            <div class="password">
+                <label for="txtPassword">Contraseña</label>
+                <input type="password" id="txtPassword" name="txtPassword" required>
+            </div>
+            <input type="submit" value="Iniciar sesión">
+            
+        </form> 
+    </div>
+</body>
+</html>

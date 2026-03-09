@@ -1,0 +1,199 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo principal */
+body {
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+
+/* Barra superior con título y botón de regresar */
+header {
+    width: 100%;
+    height: 60px;
+    background-color: #a3a3a3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 1.8em;
+    color: #333333;
+    margin-right: auto;
+}
+
+header .navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header .navbar ul li {
+    display: inline-block;
+}
+
+header .navbar ul li a img {
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* Contenedor de los formularios de búsqueda */
+.formularios {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.formularios form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    background-color: #d3d3d3;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.formularios label {
+    font-size: 1.1em;
+    color: #333333;
+}
+
+.formularios input[type="text"],
+.formularios input[type="date"],
+.formularios select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #b7b7b7;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.formularios input[type="submit"],
+.formularios input[type="button"] {
+    padding: 12px;
+    font-size: 1em;
+    background-color: #b7b7b7;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.formularios input[type="submit"]:hover,
+.formularios input[type="button"]:hover {
+    background-color: #c1c1c1;
+}
+
+/* Contenedor de la tabla de resultados */
+.tabla {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.tabla table {
+    width: 90%;
+    max-width: 1200px;
+    border-collapse: collapse;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tabla th, .tabla td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.tabla th {
+    background-color: #d3d3d3;
+    color: #333333;
+    font-weight: bold;
+}
+
+.tabla td {
+    color: #333333;
+}
+
+/* Ajusta el tamaño de las imágenes de los botones Modificar y Eliminar */
+.tabla td img {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.tabla td img:hover {
+    transform: scale(1.1); /* Efecto hover para agrandar ligeramente */
+}
+
+/* MEDIA QUERIES */
+
+/* Pantallas medianas (tablets y resoluciones menores a 1024px) */
+@media (max-width: 1024px) {
+    .formularios {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .formularios form {
+        max-width: 90%;
+    }
+}
+
+/* Pantallas pequeñas (móviles y resoluciones menores a 768px) */
+@media (max-width: 768px) {
+    .tabla table {
+        width: 100%;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    header .navbar ul li a img {
+        width: 25px;
+    }
+}
+
+/* Pantallas muy pequeñas (menores a 480px) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.3em;
+    }
+
+    .formularios form {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .tabla th, .tabla td {
+        padding: 10px;
+    }
+}

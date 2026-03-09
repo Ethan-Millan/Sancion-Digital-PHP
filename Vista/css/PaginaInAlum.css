@@ -1,0 +1,390 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #efefef;
+}
+
+.paginaAdmi {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 5px;
+}
+
+.encabezado {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 300px;
+    background-color: #a3a3a3;
+    padding-top: 20px;
+    color: #fff;
+    border-radius: 20px 0 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.encabezado h1 {
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.logo {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.logo img {
+    width: 75%;
+}
+
+.navbar {
+    margin-top: auto;
+    padding-bottom: 20px;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    display: inline-block;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #000;
+    padding: 5px 10px;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* Ajuste de la sección de texto */
+.texto {
+    margin-left: 550px;
+    padding: 20px;
+    width: calc(100% - 500px);
+    text-align: center;
+}
+
+.texto h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.texto h2 {
+    font-size: 24px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Ajuste de la sección de botones */
+.botones {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 35px;
+    margin-left: 31%;
+    padding: 115px;
+    width: calc(100% - 450px);
+}
+
+.botones input[type="button"] {
+    width: 100%;
+    padding: 25px;
+    background-color: #e0e0e0;
+    border: 1px solid #b5b5b5;
+    border-radius: 10px;
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.botones input[type="button"]:hover {
+    background-color: #d4d4d4;
+    color: #000;
+}
+
+/* Pantallas medianas (hasta 1024px) */
+@media (max-width: 1024px) {
+    .encabezado {
+        width: 250px;
+    }
+
+    .texto {
+        margin-left: 270px;
+        width: calc(100% - 270px);
+    }
+
+    .botones {
+        margin-left: 270px;
+        width: calc(100% - 270px);
+    }
+
+    .botones input[type="button"] {
+        padding: 20px;
+        font-size: 18px;
+    }
+}
+
+/* Pantallas pequeñas (hasta 768px) */
+@media (max-width: 768px) {
+    .encabezado {
+        width: 100%;
+        height: auto;
+        display: none; /* Oculta el panel gris inicialmente */
+    }
+
+    /* Muestra encabezado como desplegable */
+    .paginaAdmi.active .encabezado {
+        display: flex;
+        position: relative;
+        height: auto;
+    }
+
+    .texto {
+        display: none; /* Oculta la sección de texto */
+    }
+
+    .botones {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .botones input[type="button"] {
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    /* Botón para activar el menú desplegable */
+    .menu-button {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        padding: 10px;
+        background-color: #333;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 10;
+    }
+    
+    .menu-icon {
+        width: 30px;
+        height: 30px;
+        object-fit: contain;
+    }
+}
+
+@media (min-width: 769px) {
+    .menu-button {
+        display: none;
+    }
+}
+.carousel {
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+    margin-left: 37%; /* Ajusta la posición del carrusel */
+    overflow: hidden;
+    border: 2px solid #a3a3a3;
+    border-radius: 10px;
+    background-color: #f4f4f4;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.carousel-item {
+    flex: 0 0 100%;
+    text-align: center;
+    padding: 0 50px 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-item h3 {
+    font-size: 22px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.carousel-item p {
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.carousel-item .carousel-caption {
+    text-align: left;
+    padding: 10px;
+    color: #666;
+}
+
+.carousel-placeholder p {
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: #666;
+    margin: 10px 0;
+}
+
+/* Botones del carrusel */
+.carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background-color: #a3a3a3;
+    color: white;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.carousel button:hover {
+    background-color: #888888;
+}
+
+.carousel .prev {
+    left: 10px;
+}
+
+.carousel .next {
+    right: 10px;
+}
+
+/* Mensaje de no avisos */
+.no-avisos p {
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    color: #999;
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsivo para carrusel */
+@media (max-width: 1030px){
+    .carousel {
+
+        margin-left: 30%;
+    }
+}
+@media (max-width: 768px) {
+    .carousel {
+        width: 90%;
+        margin-left: auto;
+    }
+
+    .carousel-item h3 {
+        font-size: 20px;
+    }
+
+    .carousel-item p {
+        font-size: 14px;
+    }
+
+    .carousel button {
+        font-size: 20px;
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* Pantallas pequeñas (hasta 768px) */
+@media (max-width: 768px) {
+    .encabezado {
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+        display: none; /* Oculta el panel gris inicialmente */
+    }
+
+    /* Muestra encabezado como desplegable */
+    .paginaAdmi.active .encabezado {
+        display: flex;
+        position: relative;
+        height: auto;
+    }
+
+    .texto {
+        display: none; /* Oculta la sección de texto */
+    }
+
+    .botones {
+        margin-left: 0;
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    .botones input[type="button"],
+    .botones input[type="file"] {
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    /* Botón para activar el menú desplegable */
+    .menu-button {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        padding: 10px;
+        background-color: #333;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 10;
+        display: none; /* Oculta el botón por defecto */
+    }
+    
+    /* Mostrar el botón de menú solo en pantallas pequeñas */
+    @media (max-width: 768px) {
+        .menu-button {
+            display: block;
+        }
+    }
+    
+    /* Estilos para la imagen del icono */
+    .menu-icon {
+        width: 30px;
+        height: 30px;
+        object-fit: contain;
+    }
+    
+}
+

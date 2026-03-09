@@ -1,0 +1,261 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo principal */
+body {
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado */
+header {
+    width: 100%;
+    background-color: #a3a3a3;
+    padding: 15px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1 {
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: normal;
+}
+
+header .navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+header .navbar ul li {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+header .navbar ul li a img {
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* Estilo común para todos los formularios */
+.FormularioAlumno, .TipoMulta, .Genero {
+    width: 80%;
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.FormularioAlumno form, .TipoMulta form, .Genero form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.FormularioAlumno label, .TipoMulta label, .Genero label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.FormularioAlumno input[type="text"],
+.TipoMulta select,
+.Genero select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.FormularioAlumno input[type="submit"],
+.TipoMulta input[type="submit"],
+.Genero input[type="submit"] {
+    padding: 10px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.FormularioAlumno input[type="submit"]:hover,
+.TipoMulta input[type="submit"]:hover,
+.Genero input[type="submit"]:hover {
+    background-color: #555;
+}
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo principal */
+body {
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado */
+header {
+    width: 100%;
+    background-color: #a3a3a3;
+    padding: 15px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1 {
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: normal;
+}
+
+header .navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+header .navbar ul li {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+header .navbar ul li a img {
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* Estilo común para todos los formularios */
+.FormularioAlumno, .TipoMulta, .Genero, .PorFechas {
+    width: 80%;
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.PorFechas form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.PorFechas .fecha1,
+.PorFechas .fecha2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.PorFechas label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.PorFechas input[type="date"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    appearance: none;
+}
+
+/* Botón de envío para .PorFechas */
+.PorFechas input[type="submit"] {
+    padding: 10px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.PorFechas input[type="submit"]:hover {
+    background-color: #555;
+}
+/* Contenedor principal de los formularios en forma de mosaico */
+.formulariosPDF {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas */
+    gap: 20px; /* Espacio entre los formularios */
+    width: 80%;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+/* Estilo común para cada formulario */
+.formulariosPDF > div {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Formato interno de cada formulario */
+.formulariosPDF form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formulariosPDF label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.formulariosPDF input[type="text"],
+.formulariosPDF input[type="date"],
+.formulariosPDF select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+/* Botón de envío */
+.formulariosPDF input[type="submit"] {
+    padding: 10px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.formulariosPDF input[type="submit"]:hover {
+    background-color: #555;
+}

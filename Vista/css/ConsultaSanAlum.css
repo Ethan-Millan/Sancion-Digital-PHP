@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #efefef;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #a3a3a3;
+    padding: 20px;
+    color: #fff;
+    border-radius: 0 0 10px 10px;
+}
+
+header h1 {
+    font-size: 28px;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar li {
+    margin-left: 15px;
+}
+
+.navbar a img {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+/* Reporte */
+.reporte {
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.reporte h1 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.reporte h2 {
+    font-size: 24px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Sancion Card */
+.sancion {
+    background-color: #f9f9f9;
+    margin: 15px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.sancion h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.sancion h3 span {
+    font-weight: normal;
+    color: #555;
+}
+
+.sancion p {
+    font-size: 16px;
+    color: #333;
+    margin: 5px 0;
+}
+
+.sancion p strong {
+    color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 22px;
+    }
+    .reporte h1 {
+        font-size: 28px;
+    }
+    .reporte h2 {
+        font-size: 20px;
+    }
+    .sancion h3 {
+        font-size: 18px;
+    }
+    .sancion p {
+        font-size: 14px;
+    }
+}
+/* Imagen "Leído" en la sanción */
+.sancion a img {
+    width: 50px; /* Tamaño más pequeño */
+    height: 50px;
+    position: absolute; /* Posicionamiento absoluto */
+    bottom: 10px; /* Espaciado desde la parte inferior */
+    right: 10px; /* Espaciado desde la parte derecha */
+    cursor: pointer; /* Cursor tipo pointer para indicar interactividad */
+}
+
+.sancion {
+    position: relative; /* Relativo para que el posicionamiento absoluto de la imagen funcione */
+    background-color: #f9f9f9;
+    margin: 15px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}

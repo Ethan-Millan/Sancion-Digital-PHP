@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #efefef;
+}
+
+.paginaAdmi {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 5px;
+}
+
+.encabezado {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 450px;
+    background-color: #a3a3a3;
+    padding-top: 20px;
+    color: #fff;
+    border-radius: 20px 0 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.encabezado h1 {
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.logo {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.logo img {
+    width: 75%;
+}
+
+.navbar {
+    margin-top: auto;
+    padding-bottom: 20px;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    display: inline-block;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #000;
+    padding: 5px 10px;
+    font-size: 30px;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    border-radius: 5px;
+    transition: 1s;
+}
+
+/* Ajuste de la sección de texto */
+.texto {
+    text-align: center;
+    margin-left: 720px;
+    padding: 20px;
+    width: calc(100% - 500px);
+}
+
+.texto h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.texto h2 {
+    font-size: 36px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Ajuste de la sección de botones */
+.botones {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-left: 60%;
+    padding: 200px;
+    width: calc(100% - 450px);
+}
+
+.botones input[type="button"],
+.botones input[type="file"] {
+    width: 100%;
+    padding: 35px;
+    background-color: #e0e0e0;
+    border: 1px solid #b5b5b5;
+    border-radius: 10px;
+    font-size: 26px;
+    color: #333333;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.botones input[type="button"]:hover {
+    background-color: #d4d4d4;
+    color: #000000;
+}
+
+/* Style for file input */
+.botones input[type="file"] {
+    text-align: center;
+}
+
+/* Pantallas medianas (hasta 1024px) */
+@media (max-width: 1024px) {
+    .encabezado {
+        width: 300px;
+    }
+
+    .texto {
+        margin-left: 320px;
+        width: calc(100% - 340px);
+    }
+
+    .botones {
+        margin-left: 320px;
+        width: calc(100% - 340px);
+        grid-template-columns: 1fr;
+    }
+
+    .botones input[type="button"],
+    .botones input[type="file"] {
+        padding: 25px;
+        font-size: 20px;
+    }
+}
+
+/* Pantallas pequeñas (hasta 768px) */
+@media (max-width: 768px) {
+    .encabezado {
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+        display: none; /* Oculta el panel gris inicialmente */
+    }
+
+    /* Muestra encabezado como desplegable */
+    .paginaAdmi.active .encabezado {
+        display: flex;
+        position: relative;
+        height: auto;
+    }
+
+    .texto {
+        display: none; /* Oculta la sección de texto */
+    }
+
+    .botones {
+        margin-left: 0;
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    .botones input[type="button"],
+    .botones input[type="file"] {
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    /* Botón para activar el menú desplegable */
+    .menu-button {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        padding: 10px;
+        background-color: #333;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 10;
+        display: none; /* Oculta el botón por defecto */
+    }
+    
+    /* Mostrar el botón de menú solo en pantallas pequeñas */
+    @media (max-width: 768px) {
+        .menu-button {
+            display: block;
+        }
+    }
+    
+    /* Estilos para la imagen del icono */
+    .menu-icon {
+        width: 30px;
+        height: 30px;
+        object-fit: contain;
+    }
+    
+}
+
+/* Estilo adicional para que el botón desaparezca en pantallas grandes */
+@media (min-width: 769px) {
+    .menu-button {
+        display: none;
+        padding: 0;
+        border: none;
+        background: none;
+        box-shadow: none;
+    }
+}

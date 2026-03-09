@@ -1,0 +1,138 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo principal */
+body {
+    background-color: #f5f5f5;
+}
+
+/* Barra superior con el título y botón de regresar */
+header {
+    width: 100%;
+    height: 60px;
+    background-color: #a3a3a3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 1.8em;
+    color: #333333;
+}
+
+header .navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header .navbar ul li {
+    display: inline-block;
+}
+
+header .navbar ul li a img {
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* Estilo del formulario */
+.formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 120px); /* Ajusta para la altura de la barra superior */
+    padding: 20px;
+}
+
+.formulario form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    background-color: #d3d3d3;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px; /* Ancho mayor del formulario */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.formulario label {
+    font-size: 1.2em;
+    color: #333333;
+}
+
+.formulario input[type="text"] {
+    width: 100%;
+    padding: 15px; /* Más padding para hacerlo más grande */
+    font-size: 1.1em; /* Fuente más grande */
+    border: 1px solid #b7b7b7;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.formulario input[type="submit"] {
+    padding: 15px;
+    font-size: 1.1em;
+    background-color: #b7b7b7;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.formulario input[type="submit"]:hover {
+    background-color: #c1c1c1;
+}
+
+/* MEDIA QUERIES */
+
+/* Pantallas medianas (tablets y resoluciones menores a 1024px) */
+@media (max-width: 1024px) {
+    .formulario form {
+        max-width: 500px; /* Ajusta el ancho del formulario */
+        padding: 25px;
+    }
+}
+
+/* Pantallas pequeñas (menores a 768px) */
+@media (max-width: 768px) {
+    .formulario form {
+        max-width: 90%; /* Ajusta el ancho en pantallas pequeñas */
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 1.5em; /* Reduce el tamaño del título */
+    }
+}
+
+/* Pantallas muy pequeñas (menores a 480px) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.3em; /* Reduce aún más el tamaño del título */
+    }
+
+    .formulario form {
+        max-width: 100%; /* Ocupa todo el ancho en pantallas muy pequeñas */
+        padding: 15px;
+    }
+
+    .formulario label, .formulario input[type="text"] {
+        font-size: 1em; /* Ajuste del tamaño de fuente para pantallas pequeñas */
+    }
+
+    .formulario input[type="submit"] {
+        font-size: 1em;
+        padding: 12px;
+    }
+}

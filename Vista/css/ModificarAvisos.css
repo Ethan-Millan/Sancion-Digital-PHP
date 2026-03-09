@@ -1,0 +1,163 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo principal */
+body {
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+
+/* Barra superior con título y botón de regresar */
+header {
+    width: 100%;
+    height: 60px;
+    background-color: #a3a3a3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Título alineado a la izquierda */
+header h1 {
+    font-size: 1.8em;
+    color: #333333;
+    margin-right: auto;
+}
+
+/* Navbar con imagen de regreso a la derecha */
+header .navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header .navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header .navbar ul li {
+    display: inline-block;
+}
+
+header .navbar ul li a img {
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* Contenedor del formulario */
+.Formulario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 120px);
+    padding: 20px;
+}
+
+.Formulario form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+    background-color: #d3d3d3;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos de etiquetas y campos de entrada */
+.Formulario label {
+    font-size: 1.1em;
+    color: #333333;
+    margin-bottom: 5px;
+}
+
+.Formulario input[type="text"],
+.Formulario input[type="date"],
+.Formulario select,
+.Formulario textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #b7b7b7;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos del área de texto */
+.Formulario textarea {
+    resize: none;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos del botón de modificación */
+.Formulario .enviar input[type="submit"] {
+    padding: 12px;
+    font-size: 1em;
+    background-color: #b7b7b7;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Formulario .enviar input[type="submit"]:hover {
+    background-color: #c1c1c1;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 1024px) {
+    .Formulario form {
+        max-width: 90%;
+        padding: 25px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.3em;
+    }
+
+    header .navbar ul li a img {
+        width: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Formulario form {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 1.2em;
+    }
+
+    .Formulario label,
+    .Formulario input[type="text"],
+    .Formulario input[type="date"],
+    .Formulario select,
+    .Formulario textarea {
+        font-size: 0.9em;
+    }
+
+    .Formulario .enviar input[type="submit"] {
+        font-size: 1em;
+        padding: 10px;
+    }
+}

@@ -1,0 +1,119 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo principal */
+body {
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+
+/* Barra superior con el botón de regresar */
+header {
+    width: 100%;
+    height: 60px;
+    background-color: #a3a3a3;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    flex-grow: 1;
+    font-size: 1.5em;
+    color: #333;
+    margin-left: 20px;
+}
+
+header .navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+header .navbar ul li {
+    display: inline-block;
+}
+
+header .navbar ul li a img {
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* Contenedor centrado para los botones de acción */
+.Botones {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 120px); /* Altura ajustada para la barra superior */
+    gap: 50px; /* Espaciado entre los botones */
+    background-color: #f5f5f5;
+}
+
+/* Estilos para cada sección (Restauracion y Respaldo) */
+.Restauracion,
+.Respaldo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Estilos para el título encima de las imágenes */
+.Restauracion h3,
+.Respaldo h3 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Estilos de las imágenes de restauración y respaldo */
+.img-restauracion,
+.img-respaldo {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Efecto hover para ambas imágenes */
+.img-restauracion:hover,
+.img-respaldo:hover {
+    transform: scale(1.1); /* Efecto de zoom al pasar el ratón */
+}
+
+/* Media queries para pantallas medianas y pequeñas */
+
+/* Pantallas medianas (tablets y resoluciones menores a 1024px) */
+@media (max-width: 1024px) {
+    .Botones {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .img-restauracion,
+    .img-respaldo {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* Pantallas pequeñas (móviles y resoluciones menores a 768px) */
+@media (max-width: 768px) {
+    .img-restauracion,
+    .img-respaldo {
+        width: 100px;
+        height: 100px;
+    }
+
+    header .navbar ul li a img {
+        width: 25px;
+    }
+}

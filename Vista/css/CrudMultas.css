@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS para la barra superior con el botón de regresar */
+header {
+    width: 100%;
+    height: 60px; /* Ajusta la altura según tu preferencia */
+    background-color: #a3a3a3; /* Color de fondo de la barra */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Alinea el contenido a la derecha */
+    padding: 0 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra opcional para dar relieve */
+}
+
+header h1 {
+    font-size: 1.8em;
+    color: #333333;
+    margin-right: auto;
+    padding-left: 345px;
+}
+header .back {
+    margin-right: 0; /* Asegura que el contenedor esté alineado a la derecha */
+}
+
+header .navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header .navbar ul li {
+    display: inline-block;
+}
+
+header .navbar ul li a img {
+    width: 30px; /* Ajusta el tamaño del icono de regreso */
+    height: auto;
+    cursor: pointer;
+}
+
+/* Agrega un pequeño margen en el icono si deseas separación */
+header .navbar ul li a img {
+    margin-left: 10px;
+}
+/* CSS para la barra inferior */
+footer {
+    width: 100%;
+    height: 60px; /* Altura de la barra inferior */
+    background-color: #a3a3a3; /* Color de fondo de la barra */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Sombra superior */
+    color: #ffffff; /* Color del texto en el footer */
+}
+/* Centrado y estilo de los botones */
+.CrudMultas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 120px); /* Altura ajustada para la barra superior e inferior */
+    gap: 20px; /* Espaciado entre los botones */
+    background-color: #f5f5f5; /* Fondo opcional */
+}
+
+/* Estilos de los botones con los colores especificados */
+.CrudMultas input[type="button"] {
+    width: 300px; /* Ancho mayor de los botones */
+    padding: 35px; /* Altura mayor con padding */
+    background-color: #e0e0e0; /* Color de fondo inicial */
+    border: 1px solid #b5b5b5; /* Color del borde */
+    border-radius: 10px; /* Bordes redondeados */
+    font-size: 26px; /* Tamaño de la fuente */
+    color: #333333; /* Color del texto */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 1s; /* Transición de color y fondo */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra alrededor del botón */
+    text-align: center;
+}
+
+.CrudMultas input[type="button"]:hover {
+    background-color: #d4d4d4; /* Color de fondo al hacer hover */
+    color: #000000; /* Color del texto al hacer hover */
+    transform: scale(1.05); /* Agranda ligeramente el botón al hacer hover */
+}
+
+/* Media query para pantallas medianas (tablets y resoluciones medianas) */
+@media (max-width: 1024px) {
+    .CrudMultas {
+        flex-direction: column; /* Cambia a disposición en columna */
+        gap: 15px; /* Reduce el espaciado entre botones */
+    }
+
+    .CrudMultas input[type="button"] {
+        width: 250px; /* Ajusta el ancho de los botones */
+        padding: 30px; /* Ajusta el padding */
+        font-size: 22px; /* Tamaño de fuente más pequeño */
+    }
+}
+
+/* Media query para pantallas pequeñas (móviles y resoluciones más bajas) */
+@media (max-width: 768px) {
+    .CrudMultas input[type="button"] {
+        width: 200px; /* Ancho más pequeño para móviles */
+        padding: 25px; /* Ajusta el padding para móviles */
+        font-size: 18px; /* Tamaño de fuente más pequeño para móviles */
+    }
+}

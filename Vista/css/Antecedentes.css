@@ -1,0 +1,188 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo principal */
+body {
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Barra superior */
+header {
+    width: 100%;
+    background-color: #a3a3a3; /* Gris claro */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor del logo y menú de íconos */
+header .menu {
+    display: flex;
+    align-items: center;
+}
+
+header .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header .logo {
+    width: 50px;
+    height: auto;
+}
+
+header .menu-icon {
+    width: 50px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* Navegación alineada a la derecha */
+header .navegacion {
+    display: flex;
+    align-items: center;
+}
+
+header .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header .navbar ul li a {
+    text-decoration: none;
+    color: #333333; /* Gris oscuro */
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+header .navbar ul li a:hover {
+    color: #5c5c5c; /* Gris más oscuro al pasar el mouse */
+}
+
+/* Contenedor principal del contenido */
+.cuerpoIndex {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    flex-grow: 1; /* Hace que el contenido ocupe el espacio disponible */
+}
+
+.recuadro {
+    max-width: 1000px; /* Ancho máximo ajustado */
+    background-color: #d3d3d3; /* Gris claro */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    line-height: 1.8;
+}
+
+/* Títulos */
+.recuadro h2 {
+    font-size: 28px;
+    color: #333333; /* Gris oscuro */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.recuadro h3 {
+    font-size: 24px;
+    color: #333333; /* Gris oscuro */
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Texto del contenido */
+.recuadro p {
+    font-size: 18px;
+    color: #666666; /* Gris medio */
+    text-align: justify;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Estilos para texto en negrita */
+.recuadro b {
+    font-weight: bold;
+    color: #333333;
+}
+
+/* Pie de página */
+footer {
+    width: 100%;
+    height: 60px;
+    background-color: #a3a3a3; /* Gris claro */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333333; /* Gris oscuro */
+    font-size: 16px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    padding: 0 20px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #ffcc00; /* Color dorado para el enlace */
+    margin-left: 5px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffdd44;
+}
+
+/* Media queries para adaptar el diseño a diferentes tamaños de pantalla */
+@media (max-width: 1024px) {
+    .recuadro {
+        padding: 20px;
+        max-width: 90%;
+    }
+    .recuadro h2 {
+        font-size: 24px;
+    }
+    .recuadro h3 {
+        font-size: 20px;
+    }
+    .recuadro p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    header .navbar ul {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    header .navbar ul li {
+        margin-bottom: 10px;
+    }
+    .recuadro {
+        padding: 15px;
+    }
+    .recuadro h2 {
+        font-size: 22px;
+    }
+    .recuadro h3 {
+        font-size: 18px;
+    }
+    .recuadro p {
+        font-size: 14px;
+    }
+}

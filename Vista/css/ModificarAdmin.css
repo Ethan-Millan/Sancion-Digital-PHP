@@ -1,0 +1,146 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo principal */
+body {
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+
+/* Barra superior con título y botón de regresar */
+header {
+    width: 100%;
+    height: 60px;
+    background-color: #a3a3a3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 1.8em;
+    color: #333333;
+}
+
+header .navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header .navbar ul li {
+    display: inline-block;
+}
+
+header .navbar ul li a img {
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* Contenedor del formulario */
+.formularioA {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 120px); /* Altura ajustada para incluir la barra superior */
+    padding: 20px;
+    gap: 20px;
+}
+
+.formularioA form {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacio entre los elementos del formulario */
+    padding: 30px;
+    background-color: #d3d3d3;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.formularioA label {
+    font-size: 1.1em;
+    color: #333333;
+    margin-bottom: 5px; /* Espacio entre label y el input */
+}
+
+.formularioA input[type="text"],
+.formularioA input[type="password"],
+.formularioA input[type="date"],
+.formularioA select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #b5b5b5;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del botón de envío */
+.formularioA input[type="submit"] {
+    padding: 15px;
+    font-size: 1.1em;
+    background-color: #b7b7b7;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.formularioA input[type="submit"]:hover {
+    background-color: #c1c1c1;
+}
+
+/* Media queries para adaptar el diseño a diferentes tamaños de pantalla */
+@media (max-width: 1024px) {
+    .formularioA form {
+        max-width: 450px;
+        padding: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    header .navbar ul li a img {
+        width: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.3em;
+    }
+
+    .formularioA form {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .formularioA label,
+    .formularioA input[type="text"],
+    .formularioA input[type="password"],
+    .formularioA input[type="date"],
+    .formularioA select {
+        font-size: 0.9em;
+    }
+
+    .formularioA input[type="submit"] {
+        font-size: 1em;
+        padding: 12px;
+    }
+}

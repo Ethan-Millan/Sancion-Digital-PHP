@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estancia II</title>
+    <link rel="stylesheet" href="../css/contacto.css">
+</head>
+<body>
+    <header>
+        <div class="back">
+            <div class="menu container">
+                <div class="logo-container">
+                    <img src="../img/logo.png" class="logo" alt="Logo">
+                    <img src="../img/Upemor_B.png" class="menu-icon" alt="Menu Icon">
+                </div>
+            </div>
+        </div>
+        <div class="navegacion">
+            <nav class="navbar">
+                <ul>
+                    <li><a href="../../Controlador/Controlador.php?accion=Redireccion&accion2=Antecedentes">Antecedentes</a></li>
+                    <li><a href="../../Controlador/Controlador.php?accion=Redireccion&accion2=RegresarIndex">Regresar</a></li>
+                    <li><a href="../../Controlador/Controlador.php?accion=Redireccion&accion2=IniciarS">Inicio Sesion</a></li>
+                    <li><a href="../../Controlador/Controlador.php?accion=Redireccion&accion2=RegistroAlumnoIndex">Registrarse</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Sección de Contacto -->
+    <main>
+        <section class="contact-info">
+            <h2>Contacto</h2>
+            <p>Si tienes alguna pregunta, no dudes en contactarnos a través del siguiente formulario o utilizando la información proporcionada.</p>
+            <div class="info-details">
+                <p><strong>Dirección:</strong> Av. Universidad 123, Jiutepec, Morelos, México</p>
+                <p><strong>Teléfono:</strong> +52 777 123 4567</p>
+                <p><strong>Email:</strong> contacto@upemor.edu.mx</p>
+            </div>
+        </section>
+
+        <!-- Formulario de Contacto -->
+        <section class="contact-form">
+            <h3>Envíanos un mensaje</h3>
+            <form action="../../Controlador/Controlador.php" method="post">
+                <input type="hidden" name="accion" value="EnviarMensaje">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="subject">Asunto:</label>
+                <input type="text" id="subject" name="subject" required>
+
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>  
+        <!-- Redes Sociales -->
+        <section class="social-media">
+            <h3>Síguenos en nuestras redes sociales</h3>
+            <div class="icons">
+                <a href="#" target="_blank"><img src="../img/facebook-icon.png" alt="Facebook"></a>
+                <a href="#" target="_blank"><img src="../img/twitter-icon.png" alt="Twitter"></a>
+                <a href="#" target="_blank"><img src="../img/instagram-icon.png" alt="Instagram"></a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2023 Universidad Politécnica del Estado de Morelos - Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>

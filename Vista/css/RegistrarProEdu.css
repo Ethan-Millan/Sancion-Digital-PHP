@@ -1,0 +1,145 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo principal */
+body {
+    background-color: #f5f5f5;
+}
+
+/* Barra superior con el título y botón de regresar */
+header {
+    width: 100%;
+    height: 60px;
+    background-color: #a3a3a3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+header h1 {
+    font-size: 1.8em;
+    color: #333333;
+    margin-right: auto;
+}
+
+header .navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header .navbar ul li {
+    display: inline-block;
+}
+
+header .navbar ul li a img {
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* Contenedor del formulario centrado */
+.formularioProgramaEducativo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 120px); /* Ajuste de altura para barra superior */
+    padding: 20px;
+}
+
+/* Estilos del formulario */
+.formularioProgramaEducativo form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    background-color: #d3d3d3;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px; /* Ancho máximo del formulario */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.formularioProgramaEducativo label {
+    font-size: 1.2em;
+    color: #333333;
+}
+
+.formularioProgramaEducativo input[type="text"] {
+    width: 100%;
+    padding: 15px; /* Espaciado interno más grande */
+    font-size: 1.1em; /* Tamaño de fuente mayor */
+    border: 1px solid #b7b7b7;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.formularioProgramaEducativo input[type="submit"] {
+    padding: 15px;
+    font-size: 1.1em;
+    background-color: #b7b7b7;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.formularioProgramaEducativo input[type="submit"]:hover {
+    background-color: #c1c1c1;
+}
+
+/* MEDIA QUERIES */
+
+/* Pantallas medianas (tablets y resoluciones menores a 1024px) */
+@media (max-width: 1024px) {
+    .formularioProgramaEducativo form {
+        max-width: 450px; /* Ancho ajustado en pantallas medianas */
+        padding: 25px;
+    }
+}
+
+/* Pantallas pequeñas (menores a 768px) */
+@media (max-width: 768px) {
+    .formularioProgramaEducativo form {
+        max-width: 90%; /* Ajuste del ancho en pantallas pequeñas */
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 1.5em; /* Tamaño ajustado del título */
+    }
+
+    header .navbar ul li a img {
+        width: 25px; /* Tamaño reducido para ícono de regresar */
+    }
+}
+
+/* Pantallas muy pequeñas (menores a 480px) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.3em; /* Tamaño más pequeño para el título */
+    }
+
+    .formularioProgramaEducativo form {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .formularioProgramaEducativo label,
+    .formularioProgramaEducativo input[type="text"] {
+        font-size: 0.9em; /* Tamaño reducido de etiquetas y campos */
+    }
+
+    .formularioProgramaEducativo input[type="submit"] {
+        font-size: 1em;
+        padding: 12px;
+    }
+}
